@@ -39,7 +39,12 @@ const Header = () => {
           </nav>
 
           <div className="hidden md:flex">
-            <Button variant="industrial">Get Quote</Button>
+            <Button 
+              variant="industrial"
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+            >
+              Get Quote
+            </Button>
           </div>
 
           {/* Mobile menu button */}
@@ -72,7 +77,14 @@ const Header = () => {
                   {item.name}
                 </a>
               ))}
-              <Button variant="industrial" className="mt-4">
+              <Button 
+                variant="industrial" 
+                className="mt-4"
+                onClick={() => {
+                  document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                  setIsMenuOpen(false);
+                }}
+              >
                 Get Quote
               </Button>
             </nav>
