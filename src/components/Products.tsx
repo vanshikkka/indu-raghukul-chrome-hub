@@ -107,7 +107,11 @@ const Products = () => {
                 </div>
                 
                 <div className="pt-6">
-                  <Button variant="default" className="w-full py-3 text-lg font-semibold bg-gradient-to-r from-primary to-accent hover:shadow-lg transform hover:scale-[1.02] transition-all duration-300">
+                  <Button 
+                    variant="default" 
+                    className="w-full py-3 text-lg font-semibold bg-gradient-to-r from-primary to-accent hover:shadow-lg transform hover:scale-[1.02] transition-all duration-300"
+                    onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                  >
                     Request Quote & Sample
                   </Button>
                 </div>
