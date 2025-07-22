@@ -53,64 +53,67 @@ const Products = () => {
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {products.map((product) => (
-            <Card key={product.id} className="group hover:shadow-lg transition-all duration-300">
-              <CardHeader>
-                <div className="flex items-center justify-between mb-4">
-                  <div className={`p-3 rounded-lg bg-${product.color}/10`}>
-                    <product.icon className={`h-8 w-8 text-${product.color}`} />
+            <Card key={product.id} className="group relative overflow-hidden hover:shadow-xl transition-all duration-500 bg-gradient-to-br from-card via-card to-muted/20 border-2 hover:border-primary/30">
+              {/* Background gradient overlay */}
+              <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              
+              <CardHeader className="relative z-10">
+                <div className="flex items-center justify-between mb-6">
+                  <div className={`p-4 rounded-xl bg-gradient-to-br from-${product.color}/20 to-${product.color}/10 shadow-lg group-hover:shadow-xl transition-shadow duration-300`}>
+                    <product.icon className={`h-10 w-10 text-${product.color} group-hover:scale-110 transition-transform duration-300`} />
                   </div>
-                  <Badge variant="secondary">{product.grade}</Badge>
+                  <Badge variant="secondary" className="px-3 py-1 text-sm font-medium shadow-sm">
+                    {product.grade}
+                  </Badge>
                 </div>
-                <CardTitle className="text-2xl">{product.name}</CardTitle>
-                <CardDescription className="text-lg font-mono">{product.formula}</CardDescription>
+                <CardTitle className="text-3xl font-bold bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent group-hover:from-primary group-hover:to-accent transition-all duration-300">
+                  {product.name}
+                </CardTitle>
+                <CardDescription className="text-xl font-mono text-muted-foreground/90 mt-2">
+                  {product.formula}
+                </CardDescription>
               </CardHeader>
               
-              <CardContent className="space-y-6">
-                <p className="text-muted-foreground">{product.description}</p>
+              <CardContent className="space-y-6 relative z-10">
+                <p className="text-muted-foreground leading-relaxed text-base">{product.description}</p>
                 
-                <div>
-                  <h4 className="font-semibold text-foreground mb-3 flex items-center">
-                    <Droplets className="h-4 w-4 mr-2" />
+                <div className="bg-gradient-to-r from-muted/50 to-muted/30 rounded-lg p-4 border border-border/50">
+                  <h4 className="font-semibold text-foreground mb-3 flex items-center text-lg">
+                    <Droplets className="h-5 w-5 mr-2 text-accent" />
                     Applications
                   </h4>
-                  <div className="flex flex-wrap gap-2">
+                  <div className="grid grid-cols-2 gap-2">
                     {product.applications.map((app, index) => (
-                      <Badge key={index} variant="outline">
+                      <Badge key={index} variant="outline" className="justify-center py-2 hover:bg-accent/10 hover:border-accent/50 transition-colors duration-200">
                         {app}
                       </Badge>
                     ))}
                   </div>
                 </div>
                 
-                <div>
-                  <h4 className="font-semibold text-foreground mb-3 flex items-center">
-                    <Shield className="h-4 w-4 mr-2" />
+                <div className="bg-gradient-to-r from-primary/5 to-accent/5 rounded-lg p-4 border border-primary/20">
+                  <h4 className="font-semibold text-foreground mb-4 flex items-center text-lg">
+                    <Shield className="h-5 w-5 mr-2 text-primary" />
                     Key Specifications
                   </h4>
-                  <div className="grid grid-cols-2 gap-3">
+                  <div className="grid grid-cols-1 gap-3">
                     {product.specifications.map((spec, index) => (
-                      <div key={index} className="text-sm">
-                        <span className="text-muted-foreground">{spec.property}:</span>
-                        <span className="ml-2 font-medium">{spec.value}</span>
+                      <div key={index} className="flex justify-between items-center py-2 px-3 bg-background/50 rounded-md border border-border/30">
+                        <span className="text-muted-foreground font-medium">{spec.property}</span>
+                        <span className="font-bold text-foreground">{spec.value}</span>
                       </div>
                     ))}
                   </div>
                 </div>
                 
-                <div className="pt-4">
-                  <Button variant="outline" className="w-full">
-                    Request Quote
+                <div className="pt-6">
+                  <Button variant="default" className="w-full py-3 text-lg font-semibold bg-gradient-to-r from-primary to-accent hover:shadow-lg transform hover:scale-[1.02] transition-all duration-300">
+                    Request Quote & Sample
                   </Button>
                 </div>
               </CardContent>
             </Card>
           ))}
-        </div>
-        
-        <div className="text-center mt-12">
-          <Button variant="chemical" size="lg">
-            Download Complete Product Catalog
-          </Button>
         </div>
       </div>
     </section>
