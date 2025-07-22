@@ -31,7 +31,11 @@ const Hero = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 mb-12">
-            <Button variant="industrial" size="lg">
+            <Button 
+              variant="industrial" 
+              size="lg"
+              onClick={() => document.getElementById('products')?.scrollIntoView({ behavior: 'smooth' })}
+            >
               View Our Products <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
           </div>
