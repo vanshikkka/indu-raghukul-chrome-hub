@@ -1,4 +1,5 @@
-import { Factory, Mail, Phone, MapPin, Clock, Award } from "lucide-react";
+import { Mail, Phone, MapPin, Clock, Award } from "lucide-react";
+import companyLogo from "@/assets/company-logo.png";
 
 const Footer = () => {
   return (
@@ -8,7 +9,7 @@ const Footer = () => {
           {/* Company Info */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-3 mb-4">
-              <Factory className="h-8 w-8" />
+              <img src={companyLogo} alt="Indu Raghukul Logo" className="h-10 w-10" />
               <div>
                 <h3 className="text-xl font-bold">Indu Raghukul</h3>
                 <p className="text-sm opacity-90">Chemical Industries</p>

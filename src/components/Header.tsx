@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Factory } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import companyLogo from "@/assets/company-logo.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -18,7 +19,7 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center space-x-3">
-            <Factory className="h-8 w-8 text-primary" />
+            <img src={companyLogo} alt="Indu Raghukul Logo" className="h-10 w-10" />
             <div>
               <h1 className="text-xl font-bold text-foreground">Indu Raghukul</h1>
               <p className="text-xs text-muted-foreground">Chemical Industries</p>
