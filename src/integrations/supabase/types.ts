@@ -47,6 +47,39 @@ export type Database = {
         }
         Relationships: []
       }
+      enquiries: {
+        Row: {
+          company_name: string | null
+          created_at: string
+          email: string | null
+          full_name: string | null
+          id: number
+          message: string | null
+          phone: number | null
+          product: string | null
+        }
+        Insert: {
+          company_name?: string | null
+          created_at?: string
+          email?: string | null
+          full_name?: string | null
+          id?: number
+          message?: string | null
+          phone?: number | null
+          product?: string | null
+        }
+        Update: {
+          company_name?: string | null
+          created_at?: string
+          email?: string | null
+          full_name?: string | null
+          id?: number
+          message?: string | null
+          phone?: number | null
+          product?: string | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
