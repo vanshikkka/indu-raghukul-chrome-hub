@@ -29,7 +29,8 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      const { error } = await supabase
+      // First, save to database
+      const { error: dbError } = await supabase
         .from('contact_submissions')
         .insert({
           full_name: formData.fullName,
@@ -40,11 +41,28 @@ const Contact = () => {
           message: formData.message
         });
 
-      if (error) throw error;
+      if (dbError) throw dbError;
+
+      // Then, send email notifications
+      const { error: emailError } = await supabase.functions.invoke('send-contact-notification', {
+        body: {
+          full_name: formData.fullName,
+          email: formData.email,
+          phone: formData.phone,
+          company_name: formData.companyName,
+          product_interest: formData.productInterest,
+          message: formData.message,
+        },
+      });
+
+      if (emailError) {
+        console.error('Email notification error:', emailError);
+        // Don't throw error here - form submission was successful, just email failed
+      }
 
       toast({
         title: "Message sent successfully!",
-        description: "We'll get back to you within 24 hours.",
+        description: "We'll get back to you within 24 hours. You should also receive a confirmation email.",
       });
 
       // Reset form
