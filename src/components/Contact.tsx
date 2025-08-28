@@ -99,18 +99,16 @@ const Contact = () => {
       icon: Phone,
       title: "Phone Numbers",
       details: [
-        "+91 9876543210",
-        "+91 9876543211",
-        "Landline: 07749-123456"
+        "+91 9425530388",
+        "+91 8917401500",
+        "+91 7697056188"
       ]
     },
     {
       icon: Mail,
       title: "Email Addresses",
       details: [
-        "sales@induraghukul.com",
-        "info@induraghukul.com",
-        "quality@induraghukul.com"
+        "induraghukulfc99@gmail.com"
       ]
     },
     {
@@ -118,8 +116,7 @@ const Contact = () => {
       title: "Business Hours",
       details: [
         "Monday - Saturday: 9:00 AM - 6:00 PM",
-        "Sunday: Closed",
-        "Emergency: 24/7 Available"
+        "Sunday: Closed"
       ]
     }
   ];
@@ -309,13 +306,10 @@ const Contact = () => {
             <div className="text-center">
               <MapPin className="h-16 w-16 text-primary mx-auto mb-4" />
               <h4 className="text-xl font-semibold text-foreground mb-2">Visit Our Facility</h4>
-              <p className="text-muted-foreground mb-4">
-                Schedule a visit to our manufacturing facility in Kharsia, Chhattisgarh 
-                to see our quality processes firsthand.
+              <p className="text-muted-foreground">
+                Our manufacturing facility is located in Kharsia, Chhattisgarh 
+                where we maintain high quality processes.
               </p>
-              <Button variant="outline">
-                Schedule Factory Visit
-              </Button>
             </div>
           </div>
         </div>
