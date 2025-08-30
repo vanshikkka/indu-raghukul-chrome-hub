@@ -22,7 +22,7 @@ const Header = () => {
             <img src={companyLogo} alt="Indu Raghukul Logo" className="h-10 w-10" />
             <div>
               <h1 className="text-xl font-bold text-foreground">Indu Raghukul</h1>
-              <p className="text-xs text-muted-foreground">Chemical Industries</p>
+              <p className="text-xs text-muted-foreground">Food and Chemicals</p>
             </div>
           </div>
 
