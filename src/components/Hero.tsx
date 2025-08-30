@@ -25,7 +25,7 @@ const Hero = () => {
           </h1>
           
           <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-            Indu Raghukul Chemical Industries specializes in manufacturing high-quality 
+            Indu Raghukul Food and Chemicals specializes in manufacturing high-quality 
             Sodium Dichromate and Chrome Oxide Green. Based in Kharsia, Chhattisgarh, 
             we serve industries across India with our premium chemical products.
           </p>

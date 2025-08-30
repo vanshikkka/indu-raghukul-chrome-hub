@@ -3,7 +3,7 @@ import { Factory, Users, Target, Zap, Award, Globe } from "lucide-react";
 
 const About = () => {
   const stats = [
-    { icon: Factory, label: "Years of Experience", value: "15+" },
+    { icon: Factory, label: "Years of Experience", value: "8+" },
     { icon: Users, label: "Skilled Employees", value: "50+" },
     { icon: Globe, label: "Pan India Supply", value: "100%" },
     { icon: Award, label: "Quality Certifications", value: "5+" },
@@ -37,7 +37,7 @@ const About = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
-            About Indu Raghukul Chemical Industries
+            About Indu Raghukul Food and Chemicals
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Established as a leading manufacturer in Kharsia, Chhattisgarh, we specialize in premium chemical production
@@ -49,7 +49,7 @@ const About = () => {
             <h3 className="text-2xl font-bold text-foreground mb-6">Our Story</h3>
             <div className="space-y-4 text-muted-foreground">
               <p>
-                Indu Raghukul Chemical Industries was founded with a vision to become a trusted 
+                Indu Raghukul Food and Chemicals was founded with a vision to become a trusted 
                 supplier of high-quality chemicals to industries across India. Located in the 
                 industrial hub of Kharsia, Chhattisgarh, our strategic location provides us with 
                 excellent connectivity and access to raw materials.

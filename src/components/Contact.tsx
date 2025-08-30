@@ -90,7 +90,7 @@ const Contact = () => {
       icon: Factory,
       title: "Factory Address",
       details: [
-        "Indu Raghukul Chemical Industries",
+        "Indu Raghukul Food and Chemicals",
         "Industrial Area, Kharsia",
         "Chhattisgarh - 496661, India"
       ]

@@ -19,13 +19,6 @@ const Certifications = () => {
       color: "chrome-green"
     },
     {
-      icon: Users,
-      title: "OHSAS 18001",
-      description: "Occupational Health & Safety",
-      status: "Certified",
-      color: "sodium-orange"
-    },
-    {
       icon: FileText,
       title: "GST Registration",
       description: "Government Compliance",

@@ -36,6 +36,38 @@ const Products = () => {
         { property: "Tinting Strength", value: "95-105%" }
       ],
       grade: "Pigment Grade"
+    },
+    {
+      id: 3,
+      name: "Chromic Acid",
+      formula: "H₂CrO₄",
+      icon: Beaker,
+      color: "chrome-green",
+      description: "High-purity chromic acid for industrial applications including metal finishing, plating, and chemical processing.",
+      applications: ["Metal Plating", "Surface Treatment", "Chemical Processing", "Laboratory Use"],
+      specifications: [
+        { property: "Purity", value: "≥99%" },
+        { property: "Free Acid", value: "≥98%" },
+        { property: "Chloride Content", value: "≤0.01%" },
+        { property: "Sulfate Content", value: "≤0.1%" }
+      ],
+      grade: "Technical & Analytical Grade"
+    },
+    {
+      id: 4,
+      name: "Yellow Sulfate",
+      formula: "Al₂(SO₄)₃",
+      icon: Droplets,
+      color: "sodium-orange",
+      description: "Premium quality aluminum sulfate with excellent coagulation properties for water treatment and industrial applications.",
+      applications: ["Water Treatment", "Paper Manufacturing", "Textile Industry", "Leather Processing"],
+      specifications: [
+        { property: "Al₂O₃ Content", value: "≥17%" },
+        { property: "Iron Content", value: "≤0.5%" },
+        { property: "Water Insoluble", value: "≤0.2%" },
+        { property: "pH (1% solution)", value: "3.0-4.0" }
+      ],
+      grade: "Commercial & Technical Grade"
     }
   ];
 

@@ -91,7 +91,7 @@ const Footer = () => {
         <div className="border-t border-background/20 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-sm opacity-80">
-              <p>&copy; 2024 Indu Raghukul Chemical Industries. All rights reserved.</p>
+              <p>&copy; 2024 Indu Raghukul Food and Chemicals. All rights reserved.</p>
             </div>
             <div className="flex space-x-6 text-sm opacity-80">
               <a href="#" className="hover:opacity-100 transition-opacity">Privacy Policy</a>
